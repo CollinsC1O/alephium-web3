@@ -33,15 +33,6 @@ describe('transaction utils', () => {
   })
 
   describe('transaction confirmation', () => {
-    let originalProvider: any
-
-    beforeEach(() => {
-      originalProvider = web3.getCurrentNodeProvider()
-    })
-
-    afterEach(() => {
-      web3.setCurrentNodeProvider(originalProvider)
-    })
 
     it('should wait for transaction confirmation', async () => {
       const mockConfirmed: node.Confirmed = {
